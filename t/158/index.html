@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- HEAD -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Projet &ldquo;EQUIMED&rdquo; (cherche: expert doc santé, professionnel de santé, UX designer)</title>
+    <link rel="stylesheet" href="../../archived.css" />
+  </head>
+
+  <body>
+    <!-- BODY_TOP -->
+    <header class="header">
+      <div class="title-span">
+        <a href="../../archived.html">
+          <img src="../../images/site-logo.png" height="40" alt="Forum du Défi iDOC Santé - Le forum du Défi iDOC Santé !" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 16/02/2023.</div>
+    <h1 class="topic-title">Projet &ldquo;EQUIMED&rdquo; (cherche: expert doc santé, professionnel de santé, UX designer)</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="1">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">23 May '22</div>
+          <div class="post_content">
+<p>Bonjour à tous,<br/>
+Nicolas et moi-même souhaitons participer au défi 2D en constituant une équipe dans le cadre de notre collectif Ada’Lab qui démarre tout juste.</p>
+<p><strong>Nom du projet : EQUIMED</strong></p>
+<p><strong>Description du besoin (cas clinique auquel répond votre projet) :</strong><br/>
+<em>Rupture d’approvisionnement pour un médicament en pharmacie, il faut proposer au patient un médicament équivalent à la prescription qui tienne compte de sa situation clinique.</em></p>
+<p><strong>Membres de l’équipe (elle peut s’agrandir) :</strong></p>
+<ul>
+<li>Nicolas (data scientist)</li>
+<li>Lucile / <span class="mention">@Lucile</span> (data scientist)</li>
+<li>Dimitri / <span class="mention">@dscronias</span> (data scientist)</li>
+<li>Lotfi B (data scientist)</li>
+<li>Christine Julien / <span class="mention">@Chris84</span> (pharmacien)</li>
+<li>Myriam / <span class="mention">@Myriam</span> (pharmacien)</li>
+</ul>
+<p><strong>Mentor :</strong><br/>
+Mirojane Mohammad (HAS)</p>
+<p><strong>Description du projet (20 lignes maximum) :</strong><br/>
+Une interface web simple permettrait à l’utilisateur de rentrer deux types d’informations :</p>
+<ul>
+<li>Les infos relatives au médicament (nom, forme, dosage)</li>
+<li>En option : Les infos relatives au patient (situation clinique, comorbidités, thérapie en cours, allergies, âge, poids, autres infos sur son état général), voire connexion au DMP</li>
+</ul>
+<p>A partir de ces informations seraient calculées les valeurs suivantes :</p>
+<ul>
+<li>
+<p>Extraction des informations principales structurées du RCP (indication thérapeutique, contre-indications, voie d’administration, substance, etc.). Ces « info-critères » permettront de calculer la similarité entre médicaments. D’autres informations secondaires seraient disponible au passage de la souris ou en un clic « en savoir plus ».<br/>
+Pour cela, nous créerons une base de données complète (CSV ou SQL) avec les info-critères déjà mis à disposition par la HAS, et allons extraire les infos manquantes en utilisant des techniques de NLP. Notamment, les méthodes de Bag of word ou Word Embedding afin de résumer les concepts liés aux info-critères recherchés.</p>
+</li>
+<li>
+<p>Affichage des 5 substituts les plus proches<br/>
+Pour cela, on définirait un ordre d’importance des info-critères avec l’aide d’un professionnel de santé, pour leur associer un poids dans le clustering.<br/>
+Un clustering multivarié permettrait d’obtenir une mesure de similarité globale des médicaments. Le choix des substituts pourrait être effectué soit en prenant tous les info-critères soit en projetant le résultat sur un sous-ensemble sélectionné par l’utilisateur dans l’interface.<br/>
+Cette méthode permet de réaliser le clustering en amont et d’éviter les délais de temps de calcul à l’utilisation. Plusieurs méthodes de clustering seront proposées et comparées (hiérarchique, centroîde, techniques de NLP).</p>
+</li>
+<li>
+<p>Si des informations patients sont renseignées, elles seront utilisées pour exclure les substituts incompatibles avec la situation clinique du patient.<br/>
+Pour cela, nous pensons générer une logique de relation entre ces infos et les données médicament, puis filtrer les résultats du clustering en fonction de l’incompatibilité.</p>
+</li>
+</ul>
+<p>Tous les résultats seraient affichés sur la même page pour une lisibilité facile.<br/>
+Les info-critères du substitut le plus proche serait affichés en face du médicament renseigné.</p>
+<p><strong>Besoins en compétences :</strong></p>
+<ul>
+<li>Un expert en documents de santé</li>
+<li>Un professionnel de santé, pharmacien par exemple, représentant les utilisateurs finaux de l’outil</li>
+<li>Un UX designer</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="2">
+          <div class="user_name">Chris84</div>
+          <div class="created_at">25 May '22</div>
+          <div class="post_content">
+<p>Bonjour, je suis sur un autre projet, mais je suis pharmacienne de formation et ai enseigné dans les CFA de préparateurs en pharmacie. Si ça peut vous aider…J’ai beaucoup travaillé en officine il y a longtemps.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="3">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">25 May '22</div>
+          <div class="post_content">
+<p>Bonjour,<br/>
+Merci pour la proposition, effectivement on aurait bien besoin de votre expertise pour cadrer les fonctionnalités qu’on a imaginées, et concevoir l’interface utilisateur pour qu’elle soit le plus ergonomique possible et qu’elle corresponde au besoin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="4">
+          <div class="user_name">Myriam</div>
+          <div class="created_at">29 May '22</div>
+          <div class="post_content">
+<p>Bonjour Lucile,</p>
+<p>Je suis Myriam pharmacien.<br/>
+Je suis candidate sur un autre projet. J’attends le retour.<br/>
+Je pourrais comme Chris vous aider sur certains sujets.<br/>
+Cordialement</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="5">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">30 May '22</div>
+          <div class="post_content">
+<p>Bonjour,</p>
+<p>Merci pour votre aide.<br/>
+Tel que je l’imagine, nous pourrions vous solliciter pour concevoir l’interface, par exemple en discutant de votre vision d’un futur outil qui répondrait au besoin du projet. Ça serait de manière ponctuelle à plusieurs moments clés de l’avancement du développement.<br/>
+C’est important d’avoir le plus d’avis possibles des utilisateurs finaux dès le début du projet.<br/>
+Si ça vous convient, on vous inclut comme <span class="mention">@Chris84</span> dans l’équipe.<br/>
+On pourra convenir d’un créneau sur Gather pour se rencontrer !<br/>
+Lucile</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="6">
+          <div class="user_name">Myriam</div>
+          <div class="created_at">30 May '22</div>
+          <div class="post_content">
+<p>Bonjour Lucile,</p>
+<p>Merci pour le retour.<br/>
+En effet c’est ainsi que j’envisageais mon apport.<br/>
+Bien cordialement</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="7">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">1 Jun '22</div>
+          <div class="post_content">
+<p>Nous avons identifié que le même outil pourrait répondre à un besoin en amont comme aide à la décision pour le médecin qui prescrit et qui doit trouver un médicament répondant au même besoin que celui qu’il a l’habitude de prescrire, mais qui prend en compte une situation clinique du patient particulièrement complexe et inhabituelle.</p>
+<p>Nous cherchons donc également des médecins pour nous aiguiller et nous aider à concevoir l’outil et l’interface !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/55_2.png" class="avatar" />
+        </div>
+        <div class="post" id="8">
+          <div class="user_name">arthur_srz</div>
+          <div class="created_at">3 Jun '22</div>
+          <div class="post_content">
+<p>Hello l’équipe <a class="mention-group notify" href="/groups/equimed">@EQUIMED</a> , un rapide message pour vous dire que votre projet a bien été évalué et que nous vous proposons (l’équipe d’animation) une rencontre prochainement.</p>
+<p>Toutes les informations sont ici : <a class="inline-onebox-loading" href="https://forum.defi-idoc-sante.fr/t/nous-rencontrons-les-equipes/243">https://forum.defi-idoc-sante.fr/t/nous-rencontrons-les-equipes/243</a></p>
+<p>Par ailleurs <span class="mention">@Lucile</span>, je vois que Nicolas n’est pas inscrit sur le forum. Est-ce que ce serait possible de le convier ?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/25_2.png" class="avatar" />
+        </div>
+        <div class="post" id="9">
+          <div class="user_name">mathieu.morey</div>
+          <div class="created_at">3 Jun '22</div>
+          <div class="post_content">
+<p>J’ai ajouté à l’équipe <span class="mention">@Chris84</span> et <span class="mention">@Myriam</span> , ainsi que <span class="mention">@dscronias</span> .<br/>
+Il manque encore Lotfi B non inscrit sur le forum.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/55_2.png" class="avatar" />
+        </div>
+        <div class="post" id="10">
+          <div class="user_name">arthur_srz</div>
+          <div class="created_at">3 Jun '22</div>
+          <div class="post_content">
+<p>J’ai également précisé dans votre post initial que votre mentor sera Mirojane Mohammad (HAS) <a class="mention-group notify" href="/groups/equimed">@EQUIMED</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="11">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">6 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour,</p>
+<p>Merci pour les ajouts, a priori on sera plutôt disponibles vendredi après 14h.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="12">
+          <div class="user_name">Nicolas</div>
+          <div class="created_at">6 Jun '22</div>
+          <div class="post_content">
+<p>Salut à tous,</p>
+<p>Je rattrape le fil des messages. Je serais dispo jeudi et vendredi pour un suivi<br/>
+Nicolas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="13">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">6 Jun '22</div>
+          <div class="post_content">
+<p>Dans ce cas, on vous propose vendredi 14h, déplaçable à 15h si vous avez déjà un autre groupe sur cet horaire</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/24_2.png" class="avatar" />
+        </div>
+        <div class="post" id="14">
+          <div class="user_name">clement.feyt</div>
+          <div class="created_at">7 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour <span class="mention">@Lucile</span> , <span class="mention">@Nicolas</span> , <span class="mention">@dscronias</span>, <span class="mention">@Chris84</span> , <span class="mention">@Myriam</span> et Lofti Benosman,<br/>
+Nous vous proposons donc de vous rencontrer ce vendredi de 14h à 14h30, pouvez-vous confirmer que cela vous convient ?<br/>
+Merci !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/57_2.png" class="avatar" />
+        </div>
+        <div class="post" id="15">
+          <div class="user_name">dscronias</div>
+          <div class="created_at">7 Jun '22</div>
+          <div class="post_content">
+<p><span class="mention">@clement.feyt</span> C’est bon pour moi !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="16">
+          <div class="user_name">Nicolas</div>
+          <div class="created_at">7 Jun '22</div>
+          <div class="post_content">
+<p>Ok pour moi également<br/>
+Tu peux confirmer le rdv Clément, je vais relancer Lotfi qui n’est pas encore inscrit sur le forum</p>
+<p>A Vendredi,<br/>
+Nicolas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="17">
+          <div class="user_name">Myriam</div>
+          <div class="created_at">7 Jun '22</div>
+          <div class="post_content">
+<p>Bonsoir Lucile,</p>
+<p>J’ai malheureusement déjà un engagement vendredi à 14h.<br/>
+Je pourrais lire le CR ou prendre attache avec Lucile.<br/>
+Cordialement</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="18">
+          <div class="user_name">Chris84</div>
+          <div class="created_at">8 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour Clément, c’est OK pour moi. Bonne journée, CJ</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="19">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">8 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour,<br/>
+C’est ok pour moi également, à vendredi.<br/>
+On pourra refaire un point dans la foulée avec Myriam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="20">
+          <div class="user_name">Myriam</div>
+          <div class="created_at">9 Jun '22</div>
+          <div class="post_content">
+<p>Hello la team,<br/>
+J’ai réussi à décaler à 14:30.<br/>
+Je pourrais être présente à 14:00 mais je vous laisserai 5/10mn avant.<br/>
+A vendredi<br/>
+Myriam</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="21">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">10 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour l’équipe,<br/>
+Que diriez-vous de faire une visio de rencontre au complet la semaine du 20 juin ?<br/>
+Ça nous permettrait de faire connaissance, et que les « techs » puissent poser un max de questions aux « experts santé » pour vérifier qu’on parte dans la bonne direction.<br/>
+On pourra</p>
+<ul>
+<li>présenter un début d’interface afin de s’aligner sur les outils à mettre en place</li>
+<li>partager les liens et infos sur les bases de données dont on pourrait avoir besoin pour le développement</li>
+<li>discuter des critères et leur ordre d’importance pour définir la similarité entre médicaments</li>
+</ul>
+<p>Je propose les créneaux 13-14h ou 18-19h lundi, mardi, mercredi ou jeudi.<br/>
+Lucile</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="22">
+          <div class="user_name">Chris84</div>
+          <div class="created_at">16 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour, mercredi pour moi c’est bien. Bonne journée, Christine</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="23">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">17 Jun '22</div>
+          <div class="post_content">
+<p>Épreuve <span class="hashtag">#1</span> :</p>
+<p>La première question devra venir challenger le plus possible le type d’usager imaginé :</p>
+<p>On envisage de développer la même application à la fois pour les dispensateurs et pour les prescripteurs.<br/>
+Or, une interface simple et épurée permet-elle de s’adapter aux deux modes de fonctionnement ?<br/>
+Notamment, les deux types de professionnels de santé n’ont pas l’habitude d’utiliser les mêmes logiciels. Leurs réflexes en terme<br/>
+d’ergonomie ne sont donc probablement pas les mêmes. Dans ce cas, il apparait complexe de produire une interface intuitive pour les deux<br/>
+cas d’usage.</p>
+<p>La deuxième question devra venir challenger le mode d’interaction avec les usagers prévu initialement :</p>
+<p>La question précédente reste vraie, l’ergonomie doit être pensée en amont de manière à convenir au deux cas d’usage.<br/>
+Une interface intuitive (i.e. qui ne nécessite pas de mode d’emploi), est importante pour s’intégrer dans la pratique quotidienne fluide.</p>
+<p>Enfin, la troisième question devra remettre en question l’impact ou le bénéfice supposé de votre solution ?</p>
+<p>L’impact de la solution sera-t-il suffisamment bénéfique par rapport au risque de ne pas proposer un substitut réellement adapté au patient.<br/>
+Par exemple, si la situation clinique n’est pas entièrement renseignée, une allergie par exemple peut mettre en danger le patient s’il<br/>
+prend un médicament non prescrit initialement par son médecin, qui lui était conscient de ce problème lors de la prescription.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="24">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">20 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour Christine, on se réserve un créneau mercredi à 18h. RDV sur le gather, si c’est ok pour vous !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="25">
+          <div class="user_name">Chris84</div>
+          <div class="created_at">21 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour, OK pour moi jusqu’à 18h50. Si vous avez besoin, voici mon mail : <a href="mailto:christine.julien@porphyre.fr">christine.julien@porphyre.fr</a> À demain</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="26">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">23 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour, nous avons 2 nouvelles personnes dans l’équipe <span class="mention">@Emma</span> et <span class="mention">@pjcggf</span> (alias Pierre-Jordi) qui sont tous les deux datascientists qui remplacent Lotfi qui n’est plus disponible.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/24_2.png" class="avatar" />
+        </div>
+        <div class="post" id="27">
+          <div class="user_name">clement.feyt</div>
+          <div class="created_at">23 Jun '22</div>
+          <div class="post_content">
+<p>Bienvenue à eux deux !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="28">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">30 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour,</p>
+<p>Nous aurions besoin de médecins/pharmaciens volontaires pour annoter un tableau de données pour faire de la classification de texte. Par exemple, à partir du corpus de texte de la section Grossesse/Allaitement, résumer en labels « possible », « déconseillé », « contre-indiqué », etc. (La base Thésorimed ne semble pas robuste pour ce label)<br/>
+Nous avons extrait les données dans un tableau excel pour le besoin.<br/>
+<span class="mention">@Chris84</span>, <span class="mention">@Myriam</span> et <span class="mention">@Mirojane</span> peuvent peut-être nous aider sur ce point ?</p>
+<p>Merci !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="29">
+          <div class="user_name">Mirojane</div>
+          <div class="created_at">30 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour Lucile,<br/>
+Je veux bien tenter de faire la classification . Vous pouvez m’envoyer votre tableau. Avez-vous mon adresse mail ?</p>
+<p>Bien cordialement<br/>
+Mirojane Mohammad</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="30">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">30 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour Mirojane, merci !<br/>
+Je n’ai pas votre adresse.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="31">
+          <div class="user_name">Mirojane</div>
+          <div class="created_at">30 Jun '22</div>
+          <div class="post_content">
+<p><a href="mailto:m.mohammad@has-sante.fr">m.mohammad@has-sante.fr</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="32">
+          <div class="user_name">Myriam</div>
+          <div class="created_at">30 Jun '22</div>
+          <div class="post_content">
+<p>Bonjour Lucile,</p>
+<p>J’ai vu le message mais il est arrivé dans newsletters. Il faut que je demande à Clément pourquoi c’est ainsi.<br/>
+J’ai répondu au mail mais je viens de voir qu’il n’est pas délivré.<br/>
+Ou puis-je trouver ce fichier excel?<br/>
+Bien cordialement<br/>
+Myriam</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="33">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">1 Jul '22</div>
+          <div class="post_content">
+<p>Bonjour Myriam,</p>
+<p>Merci également pour votre aide.<br/>
+Je peux vous l’envoyer par e-mail, si vous me partagez votre adresse.</p>
+<p>Nous avons discuté avec Mirojane de la difficulté et la limitation d’utiliser uniquement le RCP pour annoter le texte de manière objective et fiable. Cependant, comme l’algorithme ne pourra s’appuyer que sur ces informations réduites, nous allons essayer de développer au moins une preuve de concept à défaut d’un outil 100% fiable mais bien plus complexe basé sur plusieurs sources d’information. Nous envisagerons peut-être une version améliorée par la suite.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="34">
+          <div class="user_name">Myriam</div>
+          <div class="created_at">1 Jul '22</div>
+          <div class="post_content">
+<p>Bonjour Lucile,</p>
+<p><a href="mailto:m.d.epane@netcourrier.com">m.d.epane@netcourrier.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="35">
+          <div class="user_name">Chris84</div>
+          <div class="created_at">1 Jul '22</div>
+          <div class="post_content">
+<p>Lucile, tu peux m’envoyer le fichier excel aussi et je regarderai ce we.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/24_2.png" class="avatar" />
+        </div>
+        <div class="post" id="36">
+          <div class="user_name">clement.feyt</div>
+          <div class="created_at">13 Jul '22</div>
+          <div class="post_content">
+<p>Hello les <a class="mention-group notify" href="/groups/equimed">@EQUIMED</a> -iens,<br/>
+Bravo pour vos deux premiers rendus, qui vous valent deux fois de suite la première place ex-aequo !<br/>
+Voici quelques remarques ci dessous.</p>
+<p>Epreuve 1</p>
+<ul>
+<li>vous développez une approche médico-économique, et vous le faîtes bien !</li>
+<li>si l’on considère l’impact que peut avoir la solution développée, les besoins auxquels elle répond et le marché potentiel, il serait intéressant de renseigner parmi les partenaires des éventuels financeurs</li>
+<li>envisagez-vous une étude sur données réelles (HDH) pour de comparer les prises en charge des patients dont les professionnels ont ou n’ont pas utilisé l’application ? Par ailleurs, quel impact vis-à-vis des solutions existantes (Kelmed et Equivalences étrangères) ?</li>
+</ul>
+<p>Epreuve 2</p>
+<ul>
+<li>très bonne description des fonctionnalités, notamment le fait d’avoir une première version, puis des nouvelles fonctionnalités une fois un cap passé</li>
+<li>beaucoup d’éléments sur le long et très long terme (dont un plan de financement en plusieurs étapes, comment travailler ensuite, recrutement …)</li>
+<li>mise sur le marché de la V1 dans 1 an et demi : ambitieux et réaliste à la fois ; la rentabilité espérée dans 2 ans peut-être un peu tôt</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/24_2.png" class="avatar" />
+        </div>
+        <div class="post" id="37">
+          <div class="user_name">clement.feyt</div>
+          <div class="created_at">29 Aug '22</div>
+          <div class="post_content">
+<p>Bonjour à vous <a class="mention-group notify" href="/groups/equimed">@EQUIMED</a>,<br/>
+Nous vous proposons d’échanger avec votre mentor <span class="mention">@Mirojane</span>, ainsi qu’avec <span class="mention">@p.liot</span> et d’autres membres de notre équipe.</p>
+<p>Seriez-vous disponible cette semaine ? Idéalement :</p>
+<ul>
+<li>mercredi après-midi,</li>
+<li>ou jeudi matin,</li>
+<li>ou vendredi matin</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="38">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">30 Aug '22</div>
+          <div class="post_content">
+<p>Bonjour Clément,<br/>
+Nous serons au moins deux disponibles jeudi matin ou vendredi matin, entre 10h et 12h<br/>
+Lucile</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/24_2.png" class="avatar" />
+        </div>
+        <div class="post" id="39">
+          <div class="user_name">clement.feyt</div>
+          <div class="created_at">31 Aug '22</div>
+          <div class="post_content">
+<p>Bonjour,<br/>
+Nous vous proposons de se retrouver vendredi à 11h15 sur le gather du défi.<br/>
+A dans 2 jours !</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post" id="40">
+          <div class="user_name">Lucile</div>
+          <div class="created_at">31 Aug '22</div>
+          <div class="post_content">
+<p>C’est noté, merci !<br/>
+A vendredi</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- BODY_BOTTOM -->
+  </body>
+  <!-- FOOTER -->
+</html>
