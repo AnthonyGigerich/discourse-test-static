@@ -1,1 +1,1 @@
-# discourse-test-static
+# discourse-test-static.
